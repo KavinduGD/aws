@@ -27,3 +27,21 @@
 <br/>
 
 <img src="./images/cusom_public_private_subnet.png" width="900"/>
+
+## Inbound Traffic (the Subtle Part)
+
+- 🛑 Inbound traffic from the internet is not controlled by the route table. Instead:
+- 🛑 The Internet Gateway (IGW) is stateful.
+
+### Inbound traffic sending as a response to an outbound request:
+
+- **If an instance in Subnet A sends a request to the internet, the IGW remembers that connection and automatically allows the return traffic back in.**
+
+### Inbound traffic not initiated by an outbound request:
+
+For unsolicited inbound traffic (like an internet client trying to reach your EC2’s public IP):
+
+- **The IGW sees the packet destined for the instance’s public IP.**
+- **IGW checks if there is a valid route _`back`_ to the instance’s subnet.**
+- **If the subnet does not have 0.0.0.0/0 → The inbound packet gets dropped**
+- **It knows how to map that to the private IP in Subnet A.**
