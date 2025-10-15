@@ -25,3 +25,18 @@
 ### Artifact
 
 - A file or set of files that are produced or consumed by actions in the pipeline, such as source code, build outputs, or deployment packages.
+
+---
+
+## Git integration
+
+### supported Git repositories
+
+- AWS GitHub
+- Bitbucket
+- Gitlab
+
+### Connecting to a Git repository
+
+- Create a connection in AWS Codepipeline to link your Git repository to the pipeline.
+- This connection allows CodePipeline to access your code and trigger the pipeline based on changes in the repository.
