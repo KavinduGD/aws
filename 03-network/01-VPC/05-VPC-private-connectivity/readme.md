@@ -1,5 +1,7 @@
 # VPC private connectivity
 
+<img src="./images/all.png" width="1000">
+
 ## VPC Endpoints
 
 ### Gateway Endpoint
