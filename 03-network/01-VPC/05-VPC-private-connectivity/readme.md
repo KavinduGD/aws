@@ -32,6 +32,15 @@
 
 <img src="./images/vpc_peering.png" width="700">
 
+- VPC CIDR should not overlap.
+- not transitive (A-B and B-C does not mean A-C).
+
+### Invalid Peering Example
+
+<img src="./images/vpc_peering_invalid.png" width="900">
+
+<img src="./images/vpc_peering_invalid1.png" width="900">
+
 ---
 
 ## AWS Transit Gateway
