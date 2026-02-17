@@ -1,4 +1,4 @@
-##ELB
+# ELB
 
 ## types of ELB
 
@@ -39,7 +39,6 @@ Addresses: 52.86.10.33
 
 - Those IPs are not static — AWS can add or remove them dynamically.
 - Each IP points to a load balancer node, and these nodes are managed by AWS in multiple AZs for fault tolerance.
-
 
 ## What is the problem solved by ELB?
 
@@ -101,7 +100,8 @@ Registered Targets:
 - Does not have an IP address
 
 Because Target Groups provide:
-  - ✅ Health checks
-  - ✅ Load balancing between multiple instances
-  - ✅ Different routing rules (host-based, path-based)
-  - ✅ Easy scaling (add/remove instances without changing LB)
+
+- ✅ Health checks
+- ✅ Load balancing between multiple instances
+- ✅ Different routing rules (host-based, path-based)
+- ✅ Easy scaling (add/remove instances without changing LB)

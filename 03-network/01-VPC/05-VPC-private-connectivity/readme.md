@@ -74,7 +74,7 @@
 
 - A Site-to-Site VPN connection enables you to securely connect your on-premises network or branch office site to your Amazon Virtual Private Cloud (VPC).
 - The connection is established over the public internet and uses IPsec (Internet Protocol Security) to encrypt the data transmitted between the two networks.
-- After connection, instances in the VPC can communicate with resources in your on-premises network as if they are within the same network.![alt text](image.png)
+- After connection, instances in the VPC can communicate with resources in your on-premises network as if they are within the same network.
 
 <img src="./images/site_to_site.png" width="700">
 
@@ -94,6 +94,6 @@
 
 - A cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS.
 
-<img src="./images/direct_connect.png" width="700">
+<img src="./images/direct_connect1.png" width="700">
 
-<img src="./images/direct_connect.png" width="700">
+<img src="./images/direct_connect2.png" width="700">
