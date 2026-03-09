@@ -38,7 +38,6 @@
 - When you launch an EC2 instance from an AMI, AWS automatically creates a root EBS volume using the AMI’s default settings.
 - We can override the default settings when creating an EC2 instance from an AMI.
 
-
 ## Snapshots
 
 - A snapshot is a backup of an EBS volume.
@@ -60,9 +59,67 @@
 ## What is a launch template?
 
 Launch Template (in AWS) is a configuration template used to launch EC2 instances.
-  - It stores settings like:
-  - AMI (machine image)
-  - Instance type (like t2.micro)
-  - Key pair
-  - Security groups
-  - Storage settings
+
+- It stores settings like:
+- AMI (machine image)
+- Instance type (like t2.micro)
+- Key pair
+- Security groups
+- Storage settings
+
+## Instance storage
+
+- Instance storage is temporary disk storage physically attached to the host machine running your EC2 instance.
+- Think of it as local SSD inside the physical server.
+
+Example:
+
+```
+Physical Server
+├── CPU
+├── RAM
+└── Local SSD → Instance Storage
+```
+
+Key characteristics
+
+| Feature     | Instance Storage                             |
+| ----------- | -------------------------------------------- |
+| Location    | Physically attached to host server           |
+| Speed       | Very fast                                    |
+| Persistence | Temporary                                    |
+| Data loss   | Data is lost if instance stops or terminates |
+
+Typical use cases
+
+- caching
+- temporary data
+- buffers
+- scratch processing
+
+🛑 Only some instance types have instance storage
+
+## 2. EBS (Elastic Block Store)
+
+Amazon EBS is persistent network storage attached to an EC2 instance.
+
+Think of it as a network hard drive.
+
+Example architecture:
+
+```text
+EC2 Instance
+     │
+     │ network
+     ↓
+EBS Volume (virtual disk)
+```
+
+Key characteristics:
+
+| Feature       | EBS                            |
+| ------------- | ------------------------------ |
+| Location      | Separate network storage       |
+| Persistence   | Data persists after stop       |
+| Detach/attach | Can attach to another instance |
+| Backup        | Supports snapshots             |
