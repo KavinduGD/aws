@@ -1,5 +1,7 @@
 # VPC
 
+- A VPC (Virtual Private Cloud) is your private network inside AWS where you run servers.
+
 <img src="./images/traditional_network_vs_VPC.png" width="600"/>
 
 ## VPC scope with respect to other services
