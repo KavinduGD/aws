@@ -123,3 +123,9 @@ Key characteristics:
 | Persistence   | Data persists after stop       |
 | Detach/attach | Can attach to another instance |
 | Backup        | Supports snapshots             |
+
+---
+
+- 🛑 We can change the instance type after launching an ec2.
+- 🛑 We cannot change AMI after launching an ec2.
+- 🛑 We can enable `stop protection` for an ec2. This feature prevents the instance from being stopped.
