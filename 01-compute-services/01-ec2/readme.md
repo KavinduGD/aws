@@ -130,3 +130,4 @@ Key characteristics:
 - 🛑 We cannot change AMI after launching an ec2.
 - 🛑 We can enable `stop protection` for an ec2. This feature prevents the instance from being stopped.
 - 🛑 We can enable `termination protection` for an ec2. This feature prevents the instance from being terminated.
+- We can attach multiple Network Interfaces (ENIs) to an EC2 instance for enhanced networking capabilities.
