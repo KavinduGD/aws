@@ -131,3 +131,4 @@ Key characteristics:
 - 🛑 We can enable `stop protection` for an ec2. This feature prevents the instance from being stopped.
 - 🛑 We can enable `termination protection` for an ec2. This feature prevents the instance from being terminated.
 - We can attach multiple Network Interfaces (ENIs) to an EC2 instance for enhanced networking capabilities.
+- In Amazon EC2, a public IP address is actually attached to the ENI (Elastic Network Interface), not directly to the EC2 instance.
