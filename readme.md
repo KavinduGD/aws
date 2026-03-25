@@ -52,10 +52,3 @@ Below you will find detailed notes and resources for each section.
 
 ### 06. Security
 *   [IAM (Identity and Access Management)](./06-security/01-IAM/readme.md)
-
----
-
-## Course Information
-
-*   **Course**: [Insert Course Name/Link Here]
-*   **Certificate**: [Insert Certificate Name/Image Here]
