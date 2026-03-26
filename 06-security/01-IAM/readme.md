@@ -1,6 +1,7 @@
 # 🔐 AWS Identity and Access Management (IAM)
 
 IAM is the AWS service that controls:
+
 - **Who** can access your AWS account.
 - **What** they can do.
 - **Which** resources they can access.
@@ -13,6 +14,7 @@ Think of IAM as the **security guard + permission manager** of your AWS account.
 ## 🧠 Why IAM Exists (Core Problem It Solves)
 
 When you create an AWS account, you get a **Root User** with full admin access. Using the root user daily is dangerous. IAM allows you to:
+
 - Create granular users.
 - Create roles for services.
 - Attach specific permissions.
@@ -25,17 +27,23 @@ When you create an AWS account, you get a **Root User** with full admin access. 
 IAM has 5 main building blocks:
 
 ### 👤 1. IAM Users
+
 Represents a person or an application (e.g., `Kavindu`, `CI/CD bot`).
+
 - **Username/Password**: For AWS Console access.
 - **Access Keys**: For CLI/API access (`Access Key ID` & `Secret Access Key`).
 - ⚠️ **Security Note**: Never share or commit secret keys.
 
 ### 👥 2. IAM Groups
+
 A collection of users. Instead of assigning permissions to individuals, you attach a policy to a group and add users to it.
-- *Example*: `DevOps-Team`, `Developers`, `ReadOnlyUsers`.
+
+- _Example_: `DevOps-Team`, `Developers`, `ReadOnlyUsers`.
 
 ### 🎭 3. IAM Roles
+
 A role is **not** a user. It is a set of permissions that can be **assumed temporarily** by:
+
 - AWS Services (e.g., EC2, Lambda).
 - Users from other AWS accounts.
 - External identities (SAML/OIDC).
@@ -44,6 +52,7 @@ A role is **not** a user. It is a set of permissions that can be **assumed tempo
 Instead of storing keys on the server, attach a role to the EC2 instance. It uses temporary, automatically rotated credentials.
 
 ### 📜 4. IAM Policies
+
 Policies define permissions using **JSON** format.
 
 ```json
@@ -60,12 +69,13 @@ Policies define permissions using **JSON** format.
 ```
 
 #### Policy Structure
-| Field | Meaning |
-| :--- | :--- |
-| **Effect** | `Allow` or `Deny` |
-| **Action** | The specific operation (e.g., `s3:GetObject`) |
-| **Resource** | The AWS resource ARN the action applies to |
-| **Condition** | (Optional) When the policy is in effect |
+
+| Field         | Meaning                                       |
+| :------------ | :-------------------------------------------- |
+| **Effect**    | `Allow` or `Deny`                             |
+| **Action**    | The specific operation (e.g., `s3:GetObject`) |
+| **Resource**  | The AWS resource ARN the action applies to    |
+| **Condition** | (Optional) When the policy is in effect       |
 
 ---
 
@@ -90,7 +100,7 @@ Policies define permissions using **JSON** format.
 
 ## 🔥 Advanced Concepts
 
-- **IAM Trust Policy**: Defines *who* is allowed to assume a role.
+- **IAM Trust Policy**: Defines _who_ is allowed to assume a role.
 - **Cross-Account Access**: Allowing Account A to access resources in Account B.
 - **Permission Boundaries**: Sets the maximum permissions an identity can have.
 - **Service Control Policies (SCP)**: Organization-level guardrails that limit permissions across accounts.
@@ -102,7 +112,19 @@ Policies define permissions using **JSON** format.
 <img src="./images/user-with-role.png" width="600"/>
 
 **Workflow:**
+
 1. Create IAM Users.
 2. Create IAM Roles with a **Trust Relationship** allowing users to assume them.
 3. Attach **Permissions Policies** to the roles.
 4. Users **Assume the Role** to perform specific tasks.
+
+## Turn on multi-session support
+
+Traditionally, if you tried to log into a second AWS account in a new tab, AWS would automatically log you out of the first one. This forced users to use "Incognito" windows or different browsers to work on Dev and Prod simultaneously.
+
+Key Features of Multi-Session Support:
+
+- Up to 5 Sessions: You can stay signed into up to five different AWS identities (Root user, IAM user, or Federated roles) at once.
+- Single Browser: No more switching between Chrome, Firefox, and Incognito mode just to see two different accounts.
+- Unique Subdomains: Once enabled, AWS changes your URL to include a session-specific prefix (e.g., https://123456789012.console.aws.amazon.com...). This "isolates" the tab so the browser knows which credentials to use for which page.
+- Easy Switching: After you turn it on, a new "Add session" button appears in that same menu, allowing you to log into another account without losing your current one.
