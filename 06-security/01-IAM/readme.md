@@ -128,3 +128,5 @@ Key Features of Multi-Session Support:
 - Single Browser: No more switching between Chrome, Firefox, and Incognito mode just to see two different accounts.
 - Unique Subdomains: Once enabled, AWS changes your URL to include a session-specific prefix (e.g., https://123456789012.console.aws.amazon.com...). This "isolates" the tab so the browser knows which credentials to use for which page.
 - Easy Switching: After you turn it on, a new "Add session" button appears in that same menu, allowing you to log into another account without losing your current one.
+
+🛑 Multi session can be between difference users of same account or totally different accounts.
