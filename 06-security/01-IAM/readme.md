@@ -130,3 +130,8 @@ Key Features of Multi-Session Support:
 - Easy Switching: After you turn it on, a new "Add session" button appears in that same menu, allowing you to log into another account without losing your current one.
 
 🛑 Multi session can be between difference users of same account or totally different accounts.
+
+## IAM Security Tools
+
+- **IAM Access advisor**: Identifies unused permissions and recommends rightsizing.
+- **Credential Report**: Provides a snapshot of all users and their credentials status.
