@@ -24,6 +24,27 @@
 - **Supports both allow and deny rules**
 - **Rules are stateless (need to allow both inbound and outbound traffic)**
 
+---
+
+- 🛑 We can change the instance type after launching an ec2.
+- 🛑 We cannot change AMI after launching an ec2.
+- 🛑 We can enable `stop protection` for an ec2. This feature prevents the instance from being stopped.
+- 🛑 We can enable `termination protection` for an ec2. This feature prevents the instance from being terminated.
+- We can attach multiple Network Interfaces (ENIs) to an EC2 instance for enhanced networking capabilities.
+- In Amazon EC2, a public IP address is actually attached to the ENI (Elastic Network Interface), not directly to the EC2 instance.
+
+---
+
+## Ec2 purchase options
+
+- On-Demand Instances: Pay for compute capacity by the hour or second with no long-term commitments.
+- Reserved Instances: A Reserved Instance is a commitment to use a specific resource configuration for 1 or 3 years. `I will use a t3.micro EC2 in Mumbai for 1 year`
+- Savings Plans: A Savings Plan is a commitment to spend $X per hour on compute, regardless of specific instance details. `I will spend $0.01 per hour on compute for 1 year`.
+- Spot Instances: Bid for unused EC2 capacity at a discounted price, with the possibility of interruption.
+- Dedicated Hosts: Physical servers dedicated to your use, allowing you to use your existing server-bound software licenses. `The software license is tied to a specific physical machine`
+- Dedicated Instances: Your instances run on hardware NOT shared with other customers. But you don't have control over the physical server.
+- Capacity Reservations: Reserve capacity for your EC2 instances in a specific Availability Zone for any duration. AWS guarantees that compute capacity (EC2 instances) is available for you whenever you need it. You must pay for the reserved capacity, regardless of whether you use it or not.
+
 ## AMI
 
 - An AMI (Amazon Machine Image) is a template used to create a virtual server in AWS.
@@ -123,12 +144,3 @@ Key characteristics:
 | Persistence   | Data persists after stop       |
 | Detach/attach | Can attach to another instance |
 | Backup        | Supports snapshots             |
-
----
-
-- 🛑 We can change the instance type after launching an ec2.
-- 🛑 We cannot change AMI after launching an ec2.
-- 🛑 We can enable `stop protection` for an ec2. This feature prevents the instance from being stopped.
-- 🛑 We can enable `termination protection` for an ec2. This feature prevents the instance from being terminated.
-- We can attach multiple Network Interfaces (ENIs) to an EC2 instance for enhanced networking capabilities.
-- In Amazon EC2, a public IP address is actually attached to the ENI (Elastic Network Interface), not directly to the EC2 instance.
