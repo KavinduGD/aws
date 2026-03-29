@@ -45,6 +45,8 @@
 - Dedicated Instances: Your instances run on hardware NOT shared with other customers. But you don't have control over the physical server.
 - Capacity Reservations: Reserve capacity for your EC2 instances in a specific Availability Zone for any duration. AWS guarantees that compute capacity (EC2 instances) is available for you whenever you need it. You must pay for the reserved capacity, regardless of whether you use it or not.
 
+---
+
 ## AMI
 
 - An AMI (Amazon Machine Image) is a template used to create a virtual server in AWS.
