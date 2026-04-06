@@ -14,3 +14,8 @@
 ## EBS vs EFS
 
 <img src="./images/ebs-vs-efs.png" width="700px"/>
+
+## EFS-Infrequent Access (EFS-IA)
+
+- EFS-IA use to store file that are not accesses frequently, but still need to be available when needed.
+- Cost is lower than EFS standard
