@@ -31,3 +31,7 @@
 ## Snapshot
 
 - A snapshot is a backup of an EBS volume.
+
+## EBS vs EFS
+
+<img src="./images/ebs-vs-efs.png" width="700px"/>

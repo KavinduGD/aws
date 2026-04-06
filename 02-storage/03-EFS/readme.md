@@ -5,4 +5,8 @@
 - **EFS is a Regional service**: Data is stored across multiple AZs within a region, providing high availability and durability.
 
 <!-- add a image --> imge
-<img src="efs.png" alt="EFS Overview Diagram" width="800"/>
+<img src="./images/efs.png" alt="EFS Overview Diagram" width="800"/>
+
+## EBS vs EFS
+
+<img src="./images/ebs-vs-efs.png" width="700px"/>
