@@ -2,23 +2,30 @@
 
 ## types of ELB
 
-- **Classic Load Balancer**: layer 4 (TCP) and layer 7 (HTTP/HTTPS) .
+- **Classic Load Balancer**:
+  - layer 4 (TCP) and layer 7 (HTTP/HTTPS) .
 
 - **Application Load Balancer**: layer 7 (HTTP/HTTPS), load balancing of HTTP traffic.
-
-- Works at Layer 7 (HTTP/HTTPS)
-- Can route based on:
-  - URL path (/api)
-  - Hostname (app.example.com)
-  - Headers
-  - Source IP
-  - Query parameters
+  - Works at Layer 7 (HTTP/HTTPS)
+  - Can route based on:
+    - URL path (/api)
+    - Hostname (app.example.com)
+    - Headers
+    - Source IP
+    - Query parameters
 
 <img src="./images/ELB.png" alt="ELB Diagram" width="600"/>
 
-- **Network Load Balancer**: Operates at layer 4 (TCP),millions of requests per second, ultra-low latencies.
+- **Network Load Balancer**:
+  - Operates at layer 4 (TCP)
+  - Millions of requests per second-
+  - ultra-low latencies.
 
-- **Gateway Load Balancer**: Combines a transparent network gateway with a load balancer.
+- **Gateway Load Balancer**:
+  - Operates at layer 3 (IP)
+  - designed specifically for managing third-party virtual appliances.
+
+## <img src="./images/compare.png" width="900"/>
 
 ## ELB architecture
 
@@ -105,3 +112,13 @@ Because Target Groups provide:
 - ✅ Load balancing between multiple instances
 - ✅ Different routing rules (host-based, path-based)
 - ✅ Easy scaling (add/remove instances without changing LB)
+
+## SSL Termination
+
+- SSL termination is the process of decrypting SSL/TLS traffic at the Load Balancer level.
+- The Load Balancer handles the SSL handshake and decryption, allowing backend servers to receive unencrypted traffic.
+- Benefits:
+  - Offloads CPU-intensive SSL processing from backend servers
+  - Simplifies certificate management (only on LB)
+  - Inspection and Security (LB can inspect traffic for threats before forwarding)
+- Example: Client → SSL → Load Balancer (decrypts) → HTTP → Backend Servers
