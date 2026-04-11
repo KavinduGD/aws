@@ -79,6 +79,8 @@
 
 - Snapshot is a backup of an EBS volume.
 
+---
+
 ## What is a launch template?
 
 Launch Template (in AWS) is a configuration template used to launch EC2 instances.
@@ -89,6 +91,8 @@ Launch Template (in AWS) is a configuration template used to launch EC2 instance
 - Key pair
 - Security groups
 - Storage settings
+
+---
 
 ## Instance storage
 
@@ -146,3 +150,9 @@ Key characteristics:
 | Persistence   | Data persists after stop       |
 | Detach/attach | Can attach to another instance |
 | Backup        | Supports snapshots             |
+
+---
+
+## Shared Responsibility Model for EC2
+
+<img src="./images/srm.png" width="800" />
