@@ -11,3 +11,11 @@
 - Storage Backed by EBS
 
 <img src="./images/rds_arc.png" width="600">
+
+## RDS Deployment Options
+
+- Single-AZ DB instance deployment
+- Multi-AZ DB instance deployment
+- Multi-AZ DB Cluster deployment
+
+  <img src="./images/RDS-depl-options.png" width="1200">
