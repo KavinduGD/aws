@@ -1,5 +1,10 @@
 # EKS
 
+- AWS-managed Kubernetes service.
+- Kubernetes is an open-source container orchestration system for automating application deployment, scaling, and management.
+- Controller plane is fully managed by AWS
+- worker loads run on EC2 instances that you manage or Fargate
+
 ## Network
 
 <img src="./images/network.png" width="800"/>
