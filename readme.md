@@ -1,14 +1,15 @@
 # AWS Cloud Learning Repository
 
-This repository contains my comprehensive notes, diagrams, and practical examples from my journey learning AWS Cloud services. The content is structured to cover core AWS concepts including Compute, Storage, Networking, Monitoring, CI/CD, and Security.
-
+This repository contains my comprehensive notes, diagrams, and practical examples from my journey learning AWS Cloud services. The content is structured to cover core AWS concepts including Compute, Storage, Networking, Databases, Monitoring, CI/CD, and Security.
 ## What I Learned
 
 Throughout this course, I have gained in-depth knowledge and hands-on experience with the following AWS services and concepts:
 
+*   **Introduction to AWS Cloud**: Explored cloud models, benefits, design principles, and the AWS economy model.
 *   **Compute Services**: Mastered the fundamentals of **EC2** instances, defined launch configurations, and managed traffic with **Auto Scaling Groups**. Explored container orchestration with **ECS** and **EKS**, serverless computing with **Lambda**, and platform-as-a-service deployments using **Elastic Beanstalk**.
 *   **Storage Solutions**: Learned to architect durable storage solutions using **S3** for object storage, **EBS** for block storage attached to instances, and **EFS** for scalable file storage shared across instances.
 *   **Networking**: Deep dived into **VPC** architecture, creating custom isolated networks with public and private **Subnets**. Configured **Route Tables**, **Internet Gateways**, and **NAT Gateways** for controlled internet access. Implemented robust security layers with **Security Groups** and **NACLs**, and established private connectivity using VPC mechanisms.
+*   **Databases**: Learned about a wide variety of database services including relational (**RDS**, **Aurora**), NoSQL (**DynamoDB**, **DocumentDB**), in-memory caching (**ElastiCache**), and data warehousing (**Redshift**).
 *   **Load Balancing**: Configured **Elastic Load Balancers (ELB)** to distribute incoming application traffic across multiple targets, ensuring high availability and fault tolerance.
 *   **Monitoring & Observability**: Utilized **CloudWatch** to monitor resources, collect metrics, and set up alarms for proactive system management.
 *   **CI/CD**: Built automated deployment pipelines using **CodePipeline** and **CodeBuild** to streamline application delivery.
@@ -17,6 +18,9 @@ Throughout this course, I have gained in-depth knowledge and hands-on experience
 ## Course Content & Notes
 
 Below you will find detailed notes and resources for each section.
+
+### 00. Introduction to AWS Cloud
+*   [Intro to AWS Cloud](./00-intro-to-aws-cloud/readme.md)
 
 ### 01. Compute Services
 *   [EC2 Instances](./01-compute-services/01-ec2/readme.md)
@@ -52,3 +56,30 @@ Below you will find detailed notes and resources for each section.
 
 ### 06. Security
 *   [IAM (Identity and Access Management)](./06-security/01-IAM/readme.md)
+
+### 07. Databases
+*   [Databases Overview](./07-databases/readme.md)
+*   [RDS](./07-databases/01-RDS/)
+*   [Aurora](./07-databases/02-Aurora/)
+*   [ElastiCache](./07-databases/03-ElastiCache/)
+*   [DynamoDB](./07-databases/04-Dynamodb/)
+*   [Redshift](./07-databases/05-Redshift/)
+*   [EMR](./07-databases/06-EMR/)
+*   [Athena](./07-databases/07-Athena/)
+*   [QuickSight](./07-databases/08-Quicksight/)
+*   [DocumentDB](./07-databases/09-DocumentDB/)
+*   [Neptune](./07-databases/10-Neptune/)
+*   [Timestream](./07-databases/11-Timestream/)
+*   [Amazon Managed Blockchain](./07-databases/12-Amazon-managed-blockchain/)
+*   [Glue](./07-databases/13-Glue/)
+*   [DMS](./07-databases/14-DMS/)
+
+### Exams
+*   [AWS Cloud Practitioner (CLF-C02)](./exams/AWS-Cloud-Practitioner-(CLF-C02)/)
+*   [Associate Level](./exams/Assisiate/)
+
+### Interview Problems
+*   [Compute Services](./interview%20problems/01-compute-services/)
+*   [Storage](./interview%20problems/02-stoarage/)
+*   [Network](./interview%20problems/03-network/)
+*   [ELB](./interview%20problems/04-ELB/)
