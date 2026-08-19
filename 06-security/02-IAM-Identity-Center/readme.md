@@ -3,6 +3,7 @@
 - On July 26, 2022, AWS Single Sign-On was renamed to AWS IAM Identity Center.
 - AWS IAM Identity Center is a service that lets you centrally manage user identities and access to multiple AWS accounts and business applications using a single sign-on (SSO) experience.
 - It is the recommended way to manage human users in AWS organizations.
+- We can use both AWS IAM and AWS IAM Identity Center at the same time (You can still have IAM users in your AWS accounts even if IAM Identity Center is enabled.)
 
 ---
 
@@ -84,6 +85,37 @@ It's mainly intended for **isolated use of certain AWS applications**.
 - SCIM is an open standard that allows you to automate the exchange of user identity information between identity domains or IT systems.
 - It is used to automatically provision and de-provision users in AWS IAM Identity Center from Azure AD.
 
+---
+
+## Applications in IAM Identity Center
+
+- Applications are applications that your users can access through the same IAM Identity Center login.
+- "After a user logs into IAM Identity Center, what other applications can they open?"
+
+```
+Microsoft Entra ID
+       ↓
+IAM Identity Center
+       ↓
+   User logs in
+       ↓
+ ┌───────────────┐
+ │ AWS Accounts  │
+ │ Salesforce    │
+ │ Slack         │
+ │ GitHub        │
+ │ Other apps    │
+ └───────────────┘
+```
+
+- The Applications section is mainly for giving users SSO access to applications outside AWS.
+
+---
+
 resources:
 
 - https://www.youtube.com/watch?v=iSCuTJNeN6c
+
+```
+
+```
